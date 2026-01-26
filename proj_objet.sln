@@ -9,7 +9,9 @@ Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "pile", "pile\pile.vbproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nombre_complexe", "nombre_complexe\nombre_complexe.csproj", "{D76E9899-1A55-46F4-8E66-C237E6C2A28E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "collection", "collection\collection.csproj", "{3393CF6F-A45F-40B3-A705-C6DB80828481}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "collection", "collection\collection.csproj", "{3393CF6F-A45F-40B3-A705-C6DB80828481}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "matrice", "matrice\matrice.csproj", "{5BB23673-C9A0-4ECD-8C6E-9CDAF7F4E3BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3393CF6F-A45F-40B3-A705-C6DB80828481}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3393CF6F-A45F-40B3-A705-C6DB80828481}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3393CF6F-A45F-40B3-A705-C6DB80828481}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BB23673-C9A0-4ECD-8C6E-9CDAF7F4E3BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BB23673-C9A0-4ECD-8C6E-9CDAF7F4E3BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BB23673-C9A0-4ECD-8C6E-9CDAF7F4E3BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BB23673-C9A0-4ECD-8C6E-9CDAF7F4E3BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
