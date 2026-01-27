@@ -35,15 +35,71 @@ namespace matrice
 
         public Matrice MultiplierParScalaire (int scalaire)
         {
+            int[,] tabmatriceRetourne = new int[ordre, ordre];
             for (int i = 0; i < ordre ; i++)
             {
-                for (int j = 0; j <= ordre ; j++)
+                for (int j = 0; j < ordre ; j++)
                 {
-                    tabMatrice [i,j] *= scalaire ;
+                    tabmatriceRetourne [i,j] = tabMatrice[i, j] * scalaire ;
                 }
             }
-            return this;
+            return new Matrice(tabmatriceRetourne);
         }
+
+        public Matrice Addition(Matrice m)
+        {
+            int[,] tabmatriceRetourne = new int[ordre,ordre];
+            
+            for (int i = 0;i < ordre ; i++)
+            {
+                for(int j = 0;j < ordre ; j++)
+                {
+                    tabmatriceRetourne[i,j] = tabMatrice[i, j] + m.tabMatrice[i,j];
+                }
+            }
+            return new Matrice(tabmatriceRetourne);
+        }
+
+        public Matrice Soustraction(Matrice m)
+        {
+            int[,] tabmatriceRetourne = new int[ordre, ordre];
+
+            for (int i = 0; i < ordre; i++)
+            {
+                for (int j = 0; j < ordre; j++)
+                {
+                    tabmatriceRetourne[i, j] = tabMatrice[i, j] - m.tabMatrice[i, j];
+                }
+            }
+            return new Matrice(tabmatriceRetourne);
+        }
+
+        public Matrice Multiplication (Matrice m)
+        {
+            int somme = 0;
+            int[,] tabmatriceRetourne = new int[ordre, ordre];
+            for (int i = 0;i < ordre; i++)
+            {
+
+                for (int j = 0;j < ordre; j++)
+                {
+                    for (int k = 0; k < ordre; k++)
+                    {
+                        somme += tabMatrice[i, k] * m.tabMatrice[k, j];
+                    }
+                    tabmatriceRetourne[i, j] = somme;
+                    somme = 0;
+                }
+            }
+            return new Matrice (tabmatriceRetourne);
+        }
+
+        public void Transposer()
+        {
+
+        }
+
+
 
         public override string ToString()
         {
