@@ -96,7 +96,30 @@ namespace matrice
 
         public void Transposer()
         {
+            int var = 0;
+            int a;
+            int b;
+            for (int i = 0; i < ordre; i++) 
+            { 
+                for(int j = var; j < ordre; j++)
+                {
+                    a = tabMatrice[i,j];
+                    b= tabMatrice[j,i];
+                    echanger(ref a, ref b);
+                    tabMatrice[i,j] = a; 
+                    tabMatrice[j,i] = b;
+                }
+                var++;
+            }
 
+        }
+
+        private void echanger(ref int a,ref int b)
+        {
+            int var;
+            var = a;
+            a = b;
+            b = var;
         }
 
 

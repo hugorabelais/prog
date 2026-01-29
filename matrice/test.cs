@@ -21,6 +21,10 @@ namespace matrice
             Console.WriteLine("matrice 1 + matrice 2 \n" + matrice1.Addition(matrice2));
             Console.WriteLine("matrice 1 - matrice 2 \n" + matrice1.Soustraction(matrice2));
             Console.WriteLine("matrice 1 * matrice 2 \n" + matrice1.Multiplication(matrice2));
+            Console.WriteLine("////////////////////////");
+            Console.WriteLine("matrice 1\n" + matrice1.ToString());
+            matrice1.Transposer();
+            Console.WriteLine("transposé de 1\n" + matrice1.ToString());
         }
     }
 }
