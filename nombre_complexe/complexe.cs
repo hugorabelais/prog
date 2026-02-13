@@ -59,6 +59,15 @@
             return Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
         }
 
+        public Complexe ComparerModule(Complexe nombre)
+        {
+            if (GetModule() > nombre.GetModule()) 
+            {
+                return this;
+            }
+            return nombre;
+        }
+
         public override string ToString()
         {
             return "Partie Reelle : " + x + " "+

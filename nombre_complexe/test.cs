@@ -39,9 +39,10 @@ namespace nombre_complexe
                     Console.WriteLine("5-Afficher le module d’un nombre complexe saisi par l’utilisateur");
                     Console.WriteLine("6-Ajouter un Complexe dans un tableau");
                     Console.WriteLine("7-Faire la somme des nombres complexes du tableau.");
-                    Console.WriteLine("8-Quitter");
+                    Console.WriteLine("8-donner le complexe avec le plus grand module");
+                    Console.WriteLine("9-Quitter");
                     choix = Convert.ToInt32(Console.ReadLine());
-                } while ((0 > choix) & (choix > 9) );
+                } while ((0 > choix) & (choix > 10) );
                 switch (choix)
                 {
                     case 1:
@@ -88,6 +89,11 @@ namespace nombre_complexe
                         Console.WriteLine(resultat.ToString());
                         break;
                     case 8:
+                        complexe1 = SaisirComplexe();
+                        complexe2= SaisirComplexe();
+                        Console.WriteLine("le nombre avec le plus grand module est "+ complexe1.ComparerModule(complexe2).ToString());
+                        break;
+                    case 9:
                         Console.WriteLine("au revoir");
                         break;
                 }
