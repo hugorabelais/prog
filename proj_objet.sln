@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fenetregraphiquetest", "fen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FenetreGraphique", "FenetreGraphique\FenetreGraphique.csproj", "{CDBE3B73-1E80-4FF0-91D6-0C343D47D064}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetAtlantik", "ProjetAtlantik\ProjetAtlantik.csproj", "{3BBAEC2E-3782-464B-AD9D-18698C8B73E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{CDBE3B73-1E80-4FF0-91D6-0C343D47D064}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDBE3B73-1E80-4FF0-91D6-0C343D47D064}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDBE3B73-1E80-4FF0-91D6-0C343D47D064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BBAEC2E-3782-464B-AD9D-18698C8B73E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBAEC2E-3782-464B-AD9D-18698C8B73E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBAEC2E-3782-464B-AD9D-18698C8B73E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBAEC2E-3782-464B-AD9D-18698C8B73E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
