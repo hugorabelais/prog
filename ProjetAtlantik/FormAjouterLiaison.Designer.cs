@@ -31,76 +31,61 @@
             this.lbxSecteur = new System.Windows.Forms.ListBox();
             this.lblSecteur = new System.Windows.Forms.Label();
             this.lblPortDepart = new System.Windows.Forms.Label();
-            this.lbxPortDepart = new System.Windows.Forms.ListBox();
-            this.lbxPortArrivee = new System.Windows.Forms.ListBox();
             this.lblPortArrivee = new System.Windows.Forms.Label();
             this.btnAjouterLiaison = new System.Windows.Forms.Button();
             this.lblDistance = new System.Windows.Forms.Label();
             this.tbxDistance = new System.Windows.Forms.TextBox();
+            this.cmbPortDepart = new System.Windows.Forms.ComboBox();
+            this.cmbPortArrivee = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lbxSecteur
             // 
             this.lbxSecteur.FormattingEnabled = true;
-            this.lbxSecteur.ItemHeight = 20;
-            this.lbxSecteur.Location = new System.Drawing.Point(46, 57);
+            this.lbxSecteur.Location = new System.Drawing.Point(11, 35);
+            this.lbxSecteur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lbxSecteur.Name = "lbxSecteur";
-            this.lbxSecteur.Size = new System.Drawing.Size(168, 304);
+            this.lbxSecteur.Size = new System.Drawing.Size(113, 199);
             this.lbxSecteur.TabIndex = 0;
             this.lbxSecteur.SelectedIndexChanged += new System.EventHandler(this.lbxSecteur_SelectedIndexChanged);
             // 
             // lblSecteur
             // 
             this.lblSecteur.AutoSize = true;
-            this.lblSecteur.Location = new System.Drawing.Point(97, 18);
+            this.lblSecteur.Location = new System.Drawing.Point(39, 9);
+            this.lblSecteur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSecteur.Name = "lblSecteur";
-            this.lblSecteur.Size = new System.Drawing.Size(65, 20);
+            this.lblSecteur.Size = new System.Drawing.Size(44, 13);
             this.lblSecteur.TabIndex = 1;
             this.lblSecteur.Text = "Secteur";
             // 
             // lblPortDepart
             // 
             this.lblPortDepart.AutoSize = true;
-            this.lblPortDepart.Location = new System.Drawing.Point(252, 68);
+            this.lblPortDepart.Location = new System.Drawing.Point(128, 47);
+            this.lblPortDepart.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPortDepart.Name = "lblPortDepart";
-            this.lblPortDepart.Size = new System.Drawing.Size(96, 20);
+            this.lblPortDepart.Size = new System.Drawing.Size(65, 13);
             this.lblPortDepart.TabIndex = 2;
             this.lblPortDepart.Text = "Port départ :";
             this.lblPortDepart.UseMnemonic = false;
             // 
-            // lbxPortDepart
-            // 
-            this.lbxPortDepart.FormattingEnabled = true;
-            this.lbxPortDepart.ItemHeight = 20;
-            this.lbxPortDepart.Location = new System.Drawing.Point(354, 57);
-            this.lbxPortDepart.Name = "lbxPortDepart";
-            this.lbxPortDepart.Size = new System.Drawing.Size(120, 104);
-            this.lbxPortDepart.TabIndex = 3;
-            this.lbxPortDepart.SelectedIndexChanged += new System.EventHandler(this.lbxPortDepart_SelectedIndexChanged);
-            // 
-            // lbxPortArrivee
-            // 
-            this.lbxPortArrivee.FormattingEnabled = true;
-            this.lbxPortArrivee.ItemHeight = 20;
-            this.lbxPortArrivee.Location = new System.Drawing.Point(594, 57);
-            this.lbxPortArrivee.Name = "lbxPortArrivee";
-            this.lbxPortArrivee.Size = new System.Drawing.Size(120, 104);
-            this.lbxPortArrivee.TabIndex = 4;
-            // 
             // lblPortArrivee
             // 
             this.lblPortArrivee.AutoSize = true;
-            this.lblPortArrivee.Location = new System.Drawing.Point(487, 68);
+            this.lblPortArrivee.Location = new System.Drawing.Point(324, 44);
+            this.lblPortArrivee.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPortArrivee.Name = "lblPortArrivee";
-            this.lblPortArrivee.Size = new System.Drawing.Size(101, 20);
+            this.lblPortArrivee.Size = new System.Drawing.Size(69, 13);
             this.lblPortArrivee.TabIndex = 5;
             this.lblPortArrivee.Text = "Port d\'arrivée";
             // 
             // btnAjouterLiaison
             // 
-            this.btnAjouterLiaison.Location = new System.Drawing.Point(567, 316);
+            this.btnAjouterLiaison.Location = new System.Drawing.Point(378, 205);
+            this.btnAjouterLiaison.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAjouterLiaison.Name = "btnAjouterLiaison";
-            this.btnAjouterLiaison.Size = new System.Drawing.Size(75, 45);
+            this.btnAjouterLiaison.Size = new System.Drawing.Size(50, 29);
             this.btnAjouterLiaison.TabIndex = 6;
             this.btnAjouterLiaison.Text = "ajouter";
             this.btnAjouterLiaison.UseVisualStyleBackColor = true;
@@ -109,33 +94,52 @@
             // lblDistance
             // 
             this.lblDistance.AutoSize = true;
-            this.lblDistance.Location = new System.Drawing.Point(505, 231);
+            this.lblDistance.Location = new System.Drawing.Point(337, 150);
+            this.lblDistance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDistance.Name = "lblDistance";
-            this.lblDistance.Size = new System.Drawing.Size(81, 20);
+            this.lblDistance.Size = new System.Drawing.Size(56, 13);
             this.lblDistance.TabIndex = 7;
             this.lblDistance.Text = "distance : ";
             // 
             // tbxDistance
             // 
-            this.tbxDistance.Location = new System.Drawing.Point(604, 231);
+            this.tbxDistance.Location = new System.Drawing.Point(403, 150);
+            this.tbxDistance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxDistance.Name = "tbxDistance";
-            this.tbxDistance.Size = new System.Drawing.Size(100, 26);
+            this.tbxDistance.Size = new System.Drawing.Size(68, 20);
             this.tbxDistance.TabIndex = 8;
+            // 
+            // cmbPortDepart
+            // 
+            this.cmbPortDepart.FormattingEnabled = true;
+            this.cmbPortDepart.Location = new System.Drawing.Point(198, 44);
+            this.cmbPortDepart.Name = "cmbPortDepart";
+            this.cmbPortDepart.Size = new System.Drawing.Size(121, 21);
+            this.cmbPortDepart.TabIndex = 9;
+            // 
+            // cmbPortArrivee
+            // 
+            this.cmbPortArrivee.FormattingEnabled = true;
+            this.cmbPortArrivee.Location = new System.Drawing.Point(403, 41);
+            this.cmbPortArrivee.Name = "cmbPortArrivee";
+            this.cmbPortArrivee.Size = new System.Drawing.Size(121, 21);
+            this.cmbPortArrivee.TabIndex = 10;
             // 
             // FormAjouterLiaison
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.Controls.Add(this.cmbPortArrivee);
+            this.Controls.Add(this.cmbPortDepart);
             this.Controls.Add(this.tbxDistance);
             this.Controls.Add(this.lblDistance);
             this.Controls.Add(this.btnAjouterLiaison);
             this.Controls.Add(this.lblPortArrivee);
-            this.Controls.Add(this.lbxPortArrivee);
-            this.Controls.Add(this.lbxPortDepart);
             this.Controls.Add(this.lblPortDepart);
             this.Controls.Add(this.lblSecteur);
             this.Controls.Add(this.lbxSecteur);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormAjouterLiaison";
             this.Text = "FormAjouterLiaison";
             this.ResumeLayout(false);
@@ -148,11 +152,11 @@
         private System.Windows.Forms.ListBox lbxSecteur;
         private System.Windows.Forms.Label lblSecteur;
         private System.Windows.Forms.Label lblPortDepart;
-        private System.Windows.Forms.ListBox lbxPortDepart;
-        private System.Windows.Forms.ListBox lbxPortArrivee;
         private System.Windows.Forms.Label lblPortArrivee;
         private System.Windows.Forms.Button btnAjouterLiaison;
         private System.Windows.Forms.Label lblDistance;
         private System.Windows.Forms.TextBox tbxDistance;
+        private System.Windows.Forms.ComboBox cmbPortDepart;
+        private System.Windows.Forms.ComboBox cmbPortArrivee;
     }
 }

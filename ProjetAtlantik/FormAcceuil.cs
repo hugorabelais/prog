@@ -35,5 +35,12 @@ namespace ProjetAtlantik
             formAjouterLiaison.ShowDialog();
 
         }
+
+
+        private void milesTarifsPourUneLiaisonEtUnePériode_Click(object sender, EventArgs e)
+        {
+            FormTarifLiasonPeriode formTar = new FormTarifLiasonPeriode();
+            formTar.ShowDialog();
+        }
     }
 }

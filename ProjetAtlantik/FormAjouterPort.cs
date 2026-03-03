@@ -1,4 +1,4 @@
-﻿using Npgsql;
+﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,29 +25,24 @@ namespace ProjetAtlantik
 
         private void btnAjouterPort_Click(object sender, EventArgs e)
         {
-            NpgsqlConnection maCnx;
-            NpgsqlDataReader jeuEnr = null;
-            maCnx = new NpgsqlConnection("Server=127.0.0.1;Port=5432;" + "User Id=postgres;Password=root;Database=Atlantik;");
-            string nom = tbxAjouterPort.Text;
-            try
+            MySqlConnection maCnx;
+            MySqlDataReader jeuEnr = null;
+            using (maCnx = new MySqlConnection("server=localhost;user=root;database=Atlantik;port=3306;password="))
             {
-                maCnx.Open(); // on se connecte
-                string requete = "insert into port (nom) values (@nom)";
-                var maCde = new NpgsqlCommand(requete, maCnx);
-                maCde.Parameters.AddWithValue("@nom", nom);
-                maCde.ExecuteNonQuery();
-                MessageBox.Show("port ajouté", "port ajouter", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
-            catch (NpgsqlException er)
-            {
-                Console.WriteLine("Erreur " + er.ToString());
-                MessageBox.Show("erreur", "erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                if (maCnx is object & maCnx.State == ConnectionState.Open)
+                string nom = tbxAjouterPort.Text;
+                try
                 {
-                    maCnx.Close();
+                    maCnx.Open(); // on se connecte
+                    string requete = "insert into port (nom) values (@nom)";
+                    var maCde = new MySqlCommand(requete, maCnx);
+                    maCde.Parameters.AddWithValue("@nom", nom);
+                    maCde.ExecuteNonQuery();
+                    MessageBox.Show("port ajouté", "port ajouter", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                catch (MySqlException er)
+                {
+                    Console.WriteLine("Erreur " + er.ToString());
+                    MessageBox.Show("erreur", "erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             Console.ReadLine();
