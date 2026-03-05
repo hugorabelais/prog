@@ -103,6 +103,7 @@ namespace ProjetAtlantik
                     gbxcategorie.Controls.Add((label));
                     textBox = new TextBox();
                     textBox.Location = new Point(250, i * 30);
+                    textBox.Tag = type.getlettre()+";"+ type.getnotype();
                     gbxcategorie.Controls.Add(textBox);
                     i += 1;
                 }
@@ -156,15 +157,30 @@ namespace ProjetAtlantik
                 MySqlDataReader jeuEnr = null;
                 maCnx = new MySqlConnection("server=localhost;user=root;database=Atlantik;port=3306;password=");
                 maCnx.Open();
-                double distance = double.Parse(tbxDistance.Text);
-                string requete = "insert into liaison (noport_depart, nosecteur, noport_arrivee,distance) values (@noport_depart, @nosecteur, @noport_arrivee,@distance)";
-                var maCde = new MySqlCommand(requete, maCnx);
-                maCde.Parameters.AddWithValue("@noport_depart", ((Port)cmbPortDepart.SelectedItem).getidPort());
-                maCde.Parameters.AddWithValue("@nosecteur", ((Secteur)lbxSecteur.SelectedItem).getidSecteur());
-                maCde.Parameters.AddWithValue("@noport_arrivee", ((Port)cmbPortArrivee.SelectedItem).getidPort());
-                maCde.Parameters.AddWithValue("@distance", distance);
-                maCde.ExecuteNonQuery();
-                MessageBox.Show("liaison ajouté", "liaison ajouter", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                string requete = "insert into tarifer (noperiode, lettrecategorie, notype,noliaison,tarif) values (@noperiode, @lettrecategorie, @notype,@noliaison,@tarif)";
+                string lettrecategorie;
+                short notype;
+                foreach (object control in gbxcategorie.Controls) {
+                    short noperiode = (short)((Periode)cmbPeriode.SelectedItem).getnoperiode();
+                    int noliaison = ((Liaison)cmbLiaison.SelectedItem).getNoLiaison();
+                    if (control is TextBox)
+                    {
+                        TextBox textBox = (TextBox)control;
+                        string lettrecategorieNotype = textBox.Tag.ToString();
+                        string[] tablettrecategorieNotype = lettrecategorieNotype.Split(';');
+                        lettrecategorie = tablettrecategorieNotype[0];
+                        notype = short.Parse(tablettrecategorieNotype[1]);
+                        double tarif = Double.Parse(textBox.Text);
+                        var maCde = new MySqlCommand(requete, maCnx);
+                        maCde.Parameters.AddWithValue("@noperiode", noperiode);
+                        maCde.Parameters.AddWithValue("@lettrecategorie", lettrecategorie);
+                        maCde.Parameters.AddWithValue("@notype",notype);
+                        maCde.Parameters.AddWithValue("@noliaison", noliaison);
+                        maCde.Parameters.AddWithValue("@tarif", tarif);
+                        maCde.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show("tarif ajouté", "tout les tarifs ont été ajouté", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                 maCnx.Close();
             }

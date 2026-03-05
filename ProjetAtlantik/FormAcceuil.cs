@@ -42,5 +42,19 @@ namespace ProjetAtlantik
             FormTarifLiasonPeriode formTar = new FormTarifLiasonPeriode();
             formTar.ShowDialog();
         }
+
+
+
+        private void miAjouterUnBateau_Click(object sender, EventArgs e)
+        {
+            FormAjouterUnbateau form = new FormAjouterUnbateau();
+            form.ShowDialog();
+        }
+
+        private void miModifierBateau_Click(object sender, EventArgs e)
+        {
+            FormModifierBateau form = new FormModifierBateau();
+            form.ShowDialog();
+        }
     }
 }

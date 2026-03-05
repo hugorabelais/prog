@@ -125,6 +125,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bateau.cs" />
+    <Compile Include="Categorie.cs" />
     <Compile Include="FormAcceuil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +144,18 @@
     </Compile>
     <Compile Include="FormAjouterPort.Designer.cs">
       <DependentUpon>FormAjouterPort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAjouterUnbateau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAjouterUnbateau.Designer.cs">
+      <DependentUpon>FormAjouterUnbateau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModifierBateau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifierBateau.Designer.cs">
+      <DependentUpon>FormModifierBateau.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSecteur.cs">
       <SubType>Form</SubType>
@@ -170,6 +184,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAjouterPort.resx">
       <DependentUpon>FormAjouterPort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAjouterUnbateau.resx">
+      <DependentUpon>FormAjouterUnbateau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModifierBateau.resx">
+      <DependentUpon>FormModifierBateau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSecteur.resx">
       <DependentUpon>FormSecteur.cs</DependentUpon>

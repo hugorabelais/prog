@@ -34,6 +34,9 @@
             this.miAjouterPort = new System.Windows.Forms.ToolStripMenuItem();
             this.miAjouterLiaison = new System.Windows.Forms.ToolStripMenuItem();
             this.milesTarifsPourUneLiaisonEtUnePériode = new System.Windows.Forms.ToolStripMenuItem();
+            this.miAjouterUnBateau = new System.Windows.Forms.ToolStripMenuItem();
+            this.mimodifier = new System.Windows.Forms.ToolStripMenuItem();
+            this.miModifierBateau = new System.Windows.Forms.ToolStripMenuItem();
             this.mmAcceuil.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +44,8 @@
             // 
             this.mmAcceuil.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.mmAcceuil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miAjouter});
+            this.miAjouter,
+            this.mimodifier});
             this.mmAcceuil.Location = new System.Drawing.Point(0, 0);
             this.mmAcceuil.Name = "mmAcceuil";
             this.mmAcceuil.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
@@ -55,7 +59,8 @@
             this.miSecteur,
             this.miAjouterPort,
             this.miAjouterLiaison,
-            this.milesTarifsPourUneLiaisonEtUnePériode});
+            this.milesTarifsPourUneLiaisonEtUnePériode,
+            this.miAjouterUnBateau});
             this.miAjouter.Name = "miAjouter";
             this.miAjouter.Size = new System.Drawing.Size(56, 22);
             this.miAjouter.Text = "ajouter";
@@ -89,6 +94,28 @@
             this.milesTarifsPourUneLiaisonEtUnePériode.Text = "Les tarifs pour une liaison et une période";
             this.milesTarifsPourUneLiaisonEtUnePériode.Click += new System.EventHandler(this.milesTarifsPourUneLiaisonEtUnePériode_Click);
             // 
+            // miAjouterUnBateau
+            // 
+            this.miAjouterUnBateau.Name = "miAjouterUnBateau";
+            this.miAjouterUnBateau.Size = new System.Drawing.Size(287, 22);
+            this.miAjouterUnBateau.Text = "Un bateau";
+            this.miAjouterUnBateau.Click += new System.EventHandler(this.miAjouterUnBateau_Click);
+            // 
+            // mimodifier
+            // 
+            this.mimodifier.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miModifierBateau});
+            this.mimodifier.Name = "mimodifier";
+            this.mimodifier.Size = new System.Drawing.Size(64, 22);
+            this.mimodifier.Text = "Modifier";
+            // 
+            // miModifierBateau
+            // 
+            this.miModifierBateau.Name = "miModifierBateau";
+            this.miModifierBateau.Size = new System.Drawing.Size(180, 22);
+            this.miModifierBateau.Text = "Un bateau";
+            this.miModifierBateau.Click += new System.EventHandler(this.miModifierBateau_Click);
+            // 
             // FormAcceuil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,7 +123,7 @@
             this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.mmAcceuil);
             this.MainMenuStrip = this.mmAcceuil;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAcceuil";
             this.Text = "acceuil";
             this.mmAcceuil.ResumeLayout(false);
@@ -114,6 +141,9 @@
         private System.Windows.Forms.ToolStripMenuItem miAjouterPort;
         private System.Windows.Forms.ToolStripMenuItem miAjouterLiaison;
         private System.Windows.Forms.ToolStripMenuItem milesTarifsPourUneLiaisonEtUnePériode;
+        private System.Windows.Forms.ToolStripMenuItem miAjouterUnBateau;
+        private System.Windows.Forms.ToolStripMenuItem mimodifier;
+        private System.Windows.Forms.ToolStripMenuItem miModifierBateau;
     }
 }
 
