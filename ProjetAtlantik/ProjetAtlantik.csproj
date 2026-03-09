@@ -133,6 +133,12 @@
     <Compile Include="FormAcceuil.Designer.cs">
       <DependentUpon>FormAcceuil.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAfficherLiaison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAfficherLiaison.Designer.cs">
+      <DependentUpon>FormAfficherLiaison.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAjouterLiaison.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,12 @@
     </Compile>
     <Compile Include="FormAjouterPort.Designer.cs">
       <DependentUpon>FormAjouterPort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAjouterTraverse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAjouterTraverse.Designer.cs">
+      <DependentUpon>FormAjouterTraverse.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAjouterUnbateau.cs">
       <SubType>Form</SubType>
@@ -179,11 +191,17 @@
     <EmbeddedResource Include="FormAcceuil.resx">
       <DependentUpon>FormAcceuil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAfficherLiaison.resx">
+      <DependentUpon>FormAfficherLiaison.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAjouterLiaison.resx">
       <DependentUpon>FormAjouterLiaison.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAjouterPort.resx">
       <DependentUpon>FormAjouterPort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAjouterTraverse.resx">
+      <DependentUpon>FormAjouterTraverse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAjouterUnbateau.resx">
       <DependentUpon>FormAjouterUnbateau.cs</DependentUpon>

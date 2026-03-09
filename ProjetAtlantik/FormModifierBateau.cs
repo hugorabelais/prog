@@ -120,7 +120,7 @@ namespace ProjetAtlantik
                             maCde2.ExecuteNonQuery();
                         }
                     }
-                    MessageBox.Show("tarif ajouté", "tout les tarifs ont été ajouté", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("bateau modifier", "les capacité du bateau ont été modifié", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                     maCnx.Close();
                 }

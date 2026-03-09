@@ -56,5 +56,17 @@ namespace ProjetAtlantik
             FormModifierBateau form = new FormModifierBateau();
             form.ShowDialog();
         }
+
+        private void miAjouterUneTraversée_Click(object sender, EventArgs e)
+        {
+            FormAjouterTraverse formAjouterTraverse = new FormAjouterTraverse();
+            formAjouterTraverse.ShowDialog();
+        }
+
+        private void miAfficherLiaison_Click(object sender, EventArgs e)
+        {
+            FormAfficherLiaison form = new FormAfficherLiaison();
+            form.ShowDialog();
+        }
     }
 }

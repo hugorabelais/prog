@@ -37,6 +37,9 @@
             this.miAjouterUnBateau = new System.Windows.Forms.ToolStripMenuItem();
             this.mimodifier = new System.Windows.Forms.ToolStripMenuItem();
             this.miModifierBateau = new System.Windows.Forms.ToolStripMenuItem();
+            this.miAjouterUneTraversée = new System.Windows.Forms.ToolStripMenuItem();
+            this.miAfficher = new System.Windows.Forms.ToolStripMenuItem();
+            this.miAfficherLiaison = new System.Windows.Forms.ToolStripMenuItem();
             this.mmAcceuil.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +48,8 @@
             this.mmAcceuil.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.mmAcceuil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miAjouter,
-            this.mimodifier});
+            this.mimodifier,
+            this.miAfficher});
             this.mmAcceuil.Location = new System.Drawing.Point(0, 0);
             this.mmAcceuil.Name = "mmAcceuil";
             this.mmAcceuil.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
@@ -60,10 +64,11 @@
             this.miAjouterPort,
             this.miAjouterLiaison,
             this.milesTarifsPourUneLiaisonEtUnePériode,
-            this.miAjouterUnBateau});
+            this.miAjouterUnBateau,
+            this.miAjouterUneTraversée});
             this.miAjouter.Name = "miAjouter";
-            this.miAjouter.Size = new System.Drawing.Size(56, 22);
-            this.miAjouter.Text = "ajouter";
+            this.miAjouter.Size = new System.Drawing.Size(58, 22);
+            this.miAjouter.Text = "Ajouter";
             // 
             // miSecteur
             // 
@@ -112,9 +117,33 @@
             // miModifierBateau
             // 
             this.miModifierBateau.Name = "miModifierBateau";
-            this.miModifierBateau.Size = new System.Drawing.Size(180, 22);
+            this.miModifierBateau.Size = new System.Drawing.Size(128, 22);
             this.miModifierBateau.Text = "Un bateau";
             this.miModifierBateau.Click += new System.EventHandler(this.miModifierBateau_Click);
+            // 
+            // miAjouterUneTraversée
+            // 
+            this.miAjouterUneTraversée.Name = "miAjouterUneTraversée";
+            this.miAjouterUneTraversée.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.miAjouterUneTraversée.Size = new System.Drawing.Size(287, 22);
+            this.miAjouterUneTraversée.Text = "Une traversée";
+            this.miAjouterUneTraversée.Click += new System.EventHandler(this.miAjouterUneTraversée_Click);
+            // 
+            // miAfficher
+            // 
+            this.miAfficher.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miAfficherLiaison});
+            this.miAfficher.Name = "miAfficher";
+            this.miAfficher.Size = new System.Drawing.Size(61, 22);
+            this.miAfficher.Text = "Afficher";
+            // 
+            // miAfficherLiaison
+            // 
+            this.miAfficherLiaison.Name = "miAfficherLiaison";
+            this.miAfficherLiaison.Size = new System.Drawing.Size(529, 22);
+            this.miAfficherLiaison.Text = "Les traversées pour une liaison et une date données avec places restantes par cat" +
+    "égorie";
+            this.miAfficherLiaison.Click += new System.EventHandler(this.miAfficherLiaison_Click);
             // 
             // FormAcceuil
             // 
@@ -144,6 +173,9 @@
         private System.Windows.Forms.ToolStripMenuItem miAjouterUnBateau;
         private System.Windows.Forms.ToolStripMenuItem mimodifier;
         private System.Windows.Forms.ToolStripMenuItem miModifierBateau;
+        private System.Windows.Forms.ToolStripMenuItem miAjouterUneTraversée;
+        private System.Windows.Forms.ToolStripMenuItem miAfficher;
+        private System.Windows.Forms.ToolStripMenuItem miAfficherLiaison;
     }
 }
 
