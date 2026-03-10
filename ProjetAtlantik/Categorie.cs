@@ -22,6 +22,8 @@ namespace ProjetAtlantik
             return lettrecategorie;
         }
 
+        public string getlibelle() { return libelle; }
+
         public override string ToString()
         {
             return lettrecategorie + " (" + libelle+") :";

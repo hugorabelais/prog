@@ -33,8 +33,9 @@
             this.lblLiaison = new System.Windows.Forms.Label();
             this.cmbLiaison = new System.Windows.Forms.ComboBox();
             this.lblDate = new System.Windows.Forms.Label();
-            this.date = new System.Windows.Forms.DateTimePicker();
+            this.dateSelectioner = new System.Windows.Forms.DateTimePicker();
             this.btnAfficher = new System.Windows.Forms.Button();
+            this.lvAfficherTraverser = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // lblSecteur
@@ -81,13 +82,15 @@
             this.lblDate.TabIndex = 4;
             this.lblDate.Text = "Date (par defaut date du jour) :";
             // 
-            // date
+            // dateSelectioner
             // 
-            this.date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date.Location = new System.Drawing.Point(489, 57);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(93, 20);
-            this.date.TabIndex = 5;
+            this.dateSelectioner.CustomFormat = "yyyy-MM-dd";
+            this.dateSelectioner.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateSelectioner.Location = new System.Drawing.Point(489, 57);
+            this.dateSelectioner.Name = "dateSelectioner";
+            this.dateSelectioner.Size = new System.Drawing.Size(93, 20);
+            this.dateSelectioner.TabIndex = 5;
+            this.dateSelectioner.Value = new System.DateTime(2021, 7, 10, 0, 0, 0, 0);
             // 
             // btnAfficher
             // 
@@ -97,14 +100,25 @@
             this.btnAfficher.TabIndex = 6;
             this.btnAfficher.Text = "Afficher les traversées";
             this.btnAfficher.UseVisualStyleBackColor = true;
+            this.btnAfficher.Click += new System.EventHandler(this.btnAfficher_Click);
+            // 
+            // lvAfficherTraverser
+            // 
+            this.lvAfficherTraverser.HideSelection = false;
+            this.lvAfficherTraverser.Location = new System.Drawing.Point(202, 179);
+            this.lvAfficherTraverser.Name = "lvAfficherTraverser";
+            this.lvAfficherTraverser.Size = new System.Drawing.Size(536, 225);
+            this.lvAfficherTraverser.TabIndex = 7;
+            this.lvAfficherTraverser.UseCompatibleStateImageBehavior = false;
             // 
             // FormAfficherLiaison
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lvAfficherTraverser);
             this.Controls.Add(this.btnAfficher);
-            this.Controls.Add(this.date);
+            this.Controls.Add(this.dateSelectioner);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.cmbLiaison);
             this.Controls.Add(this.lblLiaison);
@@ -124,7 +138,8 @@
         private System.Windows.Forms.Label lblLiaison;
         private System.Windows.Forms.ComboBox cmbLiaison;
         private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.DateTimePicker date;
+        private System.Windows.Forms.DateTimePicker dateSelectioner;
         private System.Windows.Forms.Button btnAfficher;
+        private System.Windows.Forms.ListView lvAfficherTraverser;
     }
 }
