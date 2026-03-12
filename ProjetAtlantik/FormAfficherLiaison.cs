@@ -54,11 +54,12 @@ namespace ProjetAtlantik
 
                 int capacite;
                 maCnx.Open();
-                string requete = "select CAPACITEMAX from contenir c inner join bateau b on (b.NOBATEAU = c.NOBATEAU) inner join traversee t on (t.NOBATEAU =c.NOBATEAU) where c.LETTRECATEGORIE = @lettrecategorie and t.NOTRAVERSEE = @notraversee }";
+                string requete = "select CAPACITEMAX from contenir c inner join bateau b on (b.NOBATEAU = c.NOBATEAU) inner join traversee t on (t.NOBATEAU =c.NOBATEAU) where c.LETTRECATEGORIE = @lettrecategorie and t.NOTRAVERSEE = @notraversee ";
                 var maCde = new MySqlCommand(requete, maCnx);
                 maCde.Parameters.AddWithValue("@notraversee", noTraversee);
                 maCde.Parameters.AddWithValue("@lettreCategorie", lettreCategorie);
                 jeuEnr = maCde.ExecuteReader();
+                jeuEnr.Read();
                 capacite = (int)jeuEnr["capacitemax"];
 
                 maCnx.Close();
@@ -221,9 +222,9 @@ namespace ProjetAtlantik
                 tabItem[0] = traversee.getnoTraversee().ToString();
                 tabItem[1] = traversee.getTime();
                 tabItem[2] = traversee.getNom();
-                tabItem[3] = getCapciteMaximale(traversee.getnoTraversee() , "A").ToString();
-                tabItem[4] = getCapciteMaximale(traversee.getnoTraversee(), "B").ToString(); 
-                tabItem[5] = getCapciteMaximale(traversee.getnoTraversee(), "C").ToString();
+                tabItem[3] = (getCapciteMaximale(traversee.getnoTraversee() , "A") - getQuantiteEnregistree(traversee.getnoTraversee(),"A")).ToString();
+                tabItem[4] = (getCapciteMaximale(traversee.getnoTraversee(), "B") - getQuantiteEnregistree(traversee.getnoTraversee(), "B")).ToString(); 
+                tabItem[5] = (getCapciteMaximale(traversee.getnoTraversee(), "C") - getQuantiteEnregistree(traversee.getnoTraversee(), "C")).ToString();
 
 
 

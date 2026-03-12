@@ -68,5 +68,17 @@ namespace ProjetAtlantik
             FormAfficherLiaison form = new FormAfficherLiaison();
             form.ShowDialog();
         }
+
+        private void miAfficherReservation_Click(object sender, EventArgs e)
+        {
+            FormAfficherReservation form = new FormAfficherReservation();
+            form.ShowDialog();
+        }
+
+        private void miModifierParametre_Click(object sender, EventArgs e)
+        {
+            FormModifierParametre form = new FormModifierParametre();
+            form.ShowDialog();
+        }
     }
 }

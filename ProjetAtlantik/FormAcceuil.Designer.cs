@@ -35,11 +35,14 @@
             this.miAjouterLiaison = new System.Windows.Forms.ToolStripMenuItem();
             this.milesTarifsPourUneLiaisonEtUnePériode = new System.Windows.Forms.ToolStripMenuItem();
             this.miAjouterUnBateau = new System.Windows.Forms.ToolStripMenuItem();
+            this.miAjouterUneTraversée = new System.Windows.Forms.ToolStripMenuItem();
             this.mimodifier = new System.Windows.Forms.ToolStripMenuItem();
             this.miModifierBateau = new System.Windows.Forms.ToolStripMenuItem();
-            this.miAjouterUneTraversée = new System.Windows.Forms.ToolStripMenuItem();
             this.miAfficher = new System.Windows.Forms.ToolStripMenuItem();
             this.miAfficherLiaison = new System.Windows.Forms.ToolStripMenuItem();
+            this.miAfficherReservation = new System.Windows.Forms.ToolStripMenuItem();
+            this.miAPropos = new System.Windows.Forms.ToolStripMenuItem();
+            this.miModifierParametre = new System.Windows.Forms.ToolStripMenuItem();
             this.mmAcceuil.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +52,8 @@
             this.mmAcceuil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miAjouter,
             this.mimodifier,
-            this.miAfficher});
+            this.miAfficher,
+            this.miAPropos});
             this.mmAcceuil.Location = new System.Drawing.Point(0, 0);
             this.mmAcceuil.Name = "mmAcceuil";
             this.mmAcceuil.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
@@ -106,21 +110,6 @@
             this.miAjouterUnBateau.Text = "Un bateau";
             this.miAjouterUnBateau.Click += new System.EventHandler(this.miAjouterUnBateau_Click);
             // 
-            // mimodifier
-            // 
-            this.mimodifier.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miModifierBateau});
-            this.mimodifier.Name = "mimodifier";
-            this.mimodifier.Size = new System.Drawing.Size(64, 22);
-            this.mimodifier.Text = "Modifier";
-            // 
-            // miModifierBateau
-            // 
-            this.miModifierBateau.Name = "miModifierBateau";
-            this.miModifierBateau.Size = new System.Drawing.Size(128, 22);
-            this.miModifierBateau.Text = "Un bateau";
-            this.miModifierBateau.Click += new System.EventHandler(this.miModifierBateau_Click);
-            // 
             // miAjouterUneTraversée
             // 
             this.miAjouterUneTraversée.Name = "miAjouterUneTraversée";
@@ -129,10 +118,27 @@
             this.miAjouterUneTraversée.Text = "Une traversée";
             this.miAjouterUneTraversée.Click += new System.EventHandler(this.miAjouterUneTraversée_Click);
             // 
+            // mimodifier
+            // 
+            this.mimodifier.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miModifierBateau,
+            this.miModifierParametre});
+            this.mimodifier.Name = "mimodifier";
+            this.mimodifier.Size = new System.Drawing.Size(64, 22);
+            this.mimodifier.Text = "Modifier";
+            // 
+            // miModifierBateau
+            // 
+            this.miModifierBateau.Name = "miModifierBateau";
+            this.miModifierBateau.Size = new System.Drawing.Size(191, 22);
+            this.miModifierBateau.Text = "Un bateau";
+            this.miModifierBateau.Click += new System.EventHandler(this.miModifierBateau_Click);
+            // 
             // miAfficher
             // 
             this.miAfficher.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miAfficherLiaison});
+            this.miAfficherLiaison,
+            this.miAfficherReservation});
             this.miAfficher.Name = "miAfficher";
             this.miAfficher.Size = new System.Drawing.Size(61, 22);
             this.miAfficher.Text = "Afficher";
@@ -144,6 +150,26 @@
             this.miAfficherLiaison.Text = "Les traversées pour une liaison et une date données avec places restantes par cat" +
     "égorie";
             this.miAfficherLiaison.Click += new System.EventHandler(this.miAfficherLiaison_Click);
+            // 
+            // miAfficherReservation
+            // 
+            this.miAfficherReservation.Name = "miAfficherReservation";
+            this.miAfficherReservation.Size = new System.Drawing.Size(529, 22);
+            this.miAfficherReservation.Text = "Les détails d\'une réservation pour un client";
+            this.miAfficherReservation.Click += new System.EventHandler(this.miAfficherReservation_Click);
+            // 
+            // miAPropos
+            // 
+            this.miAPropos.Name = "miAPropos";
+            this.miAPropos.Size = new System.Drawing.Size(67, 22);
+            this.miAPropos.Text = "A propos";
+            // 
+            // miModifierParametre
+            // 
+            this.miModifierParametre.Name = "miModifierParametre";
+            this.miModifierParametre.Size = new System.Drawing.Size(191, 22);
+            this.miModifierParametre.Text = "Les paramètres du site";
+            this.miModifierParametre.Click += new System.EventHandler(this.miModifierParametre_Click);
             // 
             // FormAcceuil
             // 
@@ -176,6 +202,9 @@
         private System.Windows.Forms.ToolStripMenuItem miAjouterUneTraversée;
         private System.Windows.Forms.ToolStripMenuItem miAfficher;
         private System.Windows.Forms.ToolStripMenuItem miAfficherLiaison;
+        private System.Windows.Forms.ToolStripMenuItem miAfficherReservation;
+        private System.Windows.Forms.ToolStripMenuItem miModifierParametre;
+        private System.Windows.Forms.ToolStripMenuItem miAPropos;
     }
 }
 

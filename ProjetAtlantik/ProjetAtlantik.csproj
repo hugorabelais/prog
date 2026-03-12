@@ -127,6 +127,7 @@
   <ItemGroup>
     <Compile Include="Bateau.cs" />
     <Compile Include="Categorie.cs" />
+    <Compile Include="Client.cs" />
     <Compile Include="FormAcceuil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +139,12 @@
     </Compile>
     <Compile Include="FormAfficherLiaison.Designer.cs">
       <DependentUpon>FormAfficherLiaison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAfficherReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAfficherReservation.Designer.cs">
+      <DependentUpon>FormAfficherReservation.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAjouterLiaison.cs">
       <SubType>Form</SubType>
@@ -169,6 +176,12 @@
     <Compile Include="FormModifierBateau.Designer.cs">
       <DependentUpon>FormModifierBateau.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModifierParametre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifierParametre.Designer.cs">
+      <DependentUpon>FormModifierParametre.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSecteur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +208,9 @@
     <EmbeddedResource Include="FormAfficherLiaison.resx">
       <DependentUpon>FormAfficherLiaison.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAfficherReservation.resx">
+      <DependentUpon>FormAfficherReservation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAjouterLiaison.resx">
       <DependentUpon>FormAjouterLiaison.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormModifierBateau.resx">
       <DependentUpon>FormModifierBateau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModifierParametre.resx">
+      <DependentUpon>FormModifierParametre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSecteur.resx">
       <DependentUpon>FormSecteur.cs</DependentUpon>
