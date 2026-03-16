@@ -36,25 +36,30 @@
             // lblAjouterPort
             // 
             this.lblAjouterPort.AutoSize = true;
-            this.lblAjouterPort.Location = new System.Drawing.Point(120, 64);
+            this.lblAjouterPort.Location = new System.Drawing.Point(80, 42);
+            this.lblAjouterPort.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAjouterPort.Name = "lblAjouterPort";
-            this.lblAjouterPort.Size = new System.Drawing.Size(112, 20);
+            this.lblAjouterPort.Size = new System.Drawing.Size(75, 13);
             this.lblAjouterPort.TabIndex = 0;
             this.lblAjouterPort.Text = "ajouter un port";
             this.lblAjouterPort.Click += new System.EventHandler(this.label1_Click);
             // 
             // tbxAjouterPort
             // 
-            this.tbxAjouterPort.Location = new System.Drawing.Point(259, 58);
+            this.tbxAjouterPort.Location = new System.Drawing.Point(173, 38);
+            this.tbxAjouterPort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxAjouterPort.Name = "tbxAjouterPort";
-            this.tbxAjouterPort.Size = new System.Drawing.Size(139, 26);
+            this.tbxAjouterPort.Size = new System.Drawing.Size(94, 20);
             this.tbxAjouterPort.TabIndex = 1;
+            this.tbxAjouterPort.TextChanged += new System.EventHandler(this.tbxAjouterPort_TextChanged);
+            this.tbxAjouterPort.Validating += new System.ComponentModel.CancelEventHandler(this.tbxAjouterPort_Validating);
             // 
             // btnAjouterPort
             // 
-            this.btnAjouterPort.Location = new System.Drawing.Point(279, 100);
+            this.btnAjouterPort.Location = new System.Drawing.Point(186, 65);
+            this.btnAjouterPort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAjouterPort.Name = "btnAjouterPort";
-            this.btnAjouterPort.Size = new System.Drawing.Size(90, 31);
+            this.btnAjouterPort.Size = new System.Drawing.Size(60, 20);
             this.btnAjouterPort.TabIndex = 2;
             this.btnAjouterPort.Text = "Ajouter";
             this.btnAjouterPort.UseVisualStyleBackColor = true;
@@ -62,12 +67,13 @@
             // 
             // FormAjouterPort
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 450);
+            this.ClientSize = new System.Drawing.Size(527, 292);
             this.Controls.Add(this.btnAjouterPort);
             this.Controls.Add(this.tbxAjouterPort);
             this.Controls.Add(this.lblAjouterPort);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormAjouterPort";
             this.Text = "FormAjouterPort";
             this.ResumeLayout(false);

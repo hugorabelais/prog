@@ -43,7 +43,7 @@
             // 
             this.lbxSecteur.FormattingEnabled = true;
             this.lbxSecteur.Location = new System.Drawing.Point(11, 35);
-            this.lbxSecteur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbxSecteur.Margin = new System.Windows.Forms.Padding(2);
             this.lbxSecteur.Name = "lbxSecteur";
             this.lbxSecteur.Size = new System.Drawing.Size(113, 199);
             this.lbxSecteur.TabIndex = 0;
@@ -83,7 +83,7 @@
             // btnAjouterLiaison
             // 
             this.btnAjouterLiaison.Location = new System.Drawing.Point(378, 205);
-            this.btnAjouterLiaison.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAjouterLiaison.Margin = new System.Windows.Forms.Padding(2);
             this.btnAjouterLiaison.Name = "btnAjouterLiaison";
             this.btnAjouterLiaison.Size = new System.Drawing.Size(50, 29);
             this.btnAjouterLiaison.TabIndex = 6;
@@ -104,10 +104,11 @@
             // tbxDistance
             // 
             this.tbxDistance.Location = new System.Drawing.Point(403, 150);
-            this.tbxDistance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxDistance.Margin = new System.Windows.Forms.Padding(2);
             this.tbxDistance.Name = "tbxDistance";
             this.tbxDistance.Size = new System.Drawing.Size(68, 20);
             this.tbxDistance.TabIndex = 8;
+            this.tbxDistance.Validating += new System.ComponentModel.CancelEventHandler(this.tbxDistance_Validating);
             // 
             // cmbPortDepart
             // 
@@ -139,7 +140,7 @@
             this.Controls.Add(this.lblPortDepart);
             this.Controls.Add(this.lblSecteur);
             this.Controls.Add(this.lbxSecteur);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAjouterLiaison";
             this.Text = "FormAjouterLiaison";
             this.ResumeLayout(false);

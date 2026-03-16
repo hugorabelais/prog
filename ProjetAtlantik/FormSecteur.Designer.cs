@@ -36,24 +36,28 @@
             // lblAjouterSecteur
             // 
             this.lblAjouterSecteur.AutoSize = true;
-            this.lblAjouterSecteur.Location = new System.Drawing.Point(110, 86);
+            this.lblAjouterSecteur.Location = new System.Drawing.Point(73, 56);
+            this.lblAjouterSecteur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAjouterSecteur.Name = "lblAjouterSecteur";
-            this.lblAjouterSecteur.Size = new System.Drawing.Size(143, 20);
+            this.lblAjouterSecteur.Size = new System.Drawing.Size(96, 13);
             this.lblAjouterSecteur.TabIndex = 0;
             this.lblAjouterSecteur.Text = "Ajouter un secteur ";
             // 
             // tbxAjouterSecteur
             // 
-            this.tbxAjouterSecteur.Location = new System.Drawing.Point(300, 83);
+            this.tbxAjouterSecteur.Location = new System.Drawing.Point(200, 54);
+            this.tbxAjouterSecteur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxAjouterSecteur.Name = "tbxAjouterSecteur";
-            this.tbxAjouterSecteur.Size = new System.Drawing.Size(135, 26);
+            this.tbxAjouterSecteur.Size = new System.Drawing.Size(91, 20);
             this.tbxAjouterSecteur.TabIndex = 1;
+            this.tbxAjouterSecteur.Validating += new System.ComponentModel.CancelEventHandler(this.tbxAjouterSecteur_Validating);
             // 
             // btnAjouterSecteur
             // 
-            this.btnAjouterSecteur.Location = new System.Drawing.Point(323, 130);
+            this.btnAjouterSecteur.Location = new System.Drawing.Point(215, 84);
+            this.btnAjouterSecteur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAjouterSecteur.Name = "btnAjouterSecteur";
-            this.btnAjouterSecteur.Size = new System.Drawing.Size(75, 41);
+            this.btnAjouterSecteur.Size = new System.Drawing.Size(50, 27);
             this.btnAjouterSecteur.TabIndex = 2;
             this.btnAjouterSecteur.Text = "Ajouter";
             this.btnAjouterSecteur.UseVisualStyleBackColor = true;
@@ -61,14 +65,16 @@
             // 
             // FormSecteur
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.btnAjouterSecteur);
             this.Controls.Add(this.tbxAjouterSecteur);
             this.Controls.Add(this.lblAjouterSecteur);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormSecteur";
             this.Text = "FormSecteur";
+            this.Validating += new System.ComponentModel.CancelEventHandler(this.FormSecteur_Validating);
             this.ResumeLayout(false);
             this.PerformLayout();
 

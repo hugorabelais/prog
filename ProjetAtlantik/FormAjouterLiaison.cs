@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -79,12 +80,14 @@ namespace ProjetAtlantik
 
         private void btnAjouterLiaison_Click(object sender, EventArgs e)
         {
-            try
+            if (lbxSecteur.SelectedItem != null && cmbPortArrivee.SelectedItem != null && cmbPortDepart.SelectedItem != null && tbxDistance.Text != "")
             {
-                MySqlConnection maCnx;
-                MySqlDataReader jeuEnr = null;
-                maCnx = new MySqlConnection("server=localhost;user=root;database=Atlantik;port=3306;password=");
-                maCnx.Open();
+                try
+                {
+                    MySqlConnection maCnx;
+                    MySqlDataReader jeuEnr = null;
+                    maCnx = new MySqlConnection("server=localhost;user=root;database=Atlantik;port=3306;password=");
+                    maCnx.Open();
                     double distance = double.Parse(tbxDistance.Text);
                     string requete = "insert into liaison (noport_depart, nosecteur, noport_arrivee,distance) values (@noport_depart, @nosecteur, @noport_arrivee,@distance)";
                     var maCde = new MySqlCommand(requete, maCnx);
@@ -94,18 +97,44 @@ namespace ProjetAtlantik
                     maCde.Parameters.AddWithValue("@distance", distance);
                     maCde.ExecuteNonQuery();
                     MessageBox.Show("liaison ajouté", "liaison ajouter", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                
-                maCnx.Close();
+
+                    maCnx.Close();
+                }
+                catch (MySqlException er)
+                {
+
+                    MessageBox.Show("erreur", "erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (MySqlException er)
+            else
             {
-               
-                MessageBox.Show("erreur", "erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Veuillez renseigner toutes les infos !");
             }
+
 
 
 
         }
 
+        private void tbxDistance_Validating(object sender, CancelEventArgs e)
+        {
+            var objetRegEx = new Regex("^[0-9]*([,][0-9])*$");
+            // Nombre : ^[0-9]*$
+            // Alphabétique (sans accent, sans blanc : ^[a-zA-Z]*$
+            // Alphabétique (avec accent) : ^[a-zA-Zéèêëçàâôù ûïî]*$
+            var résultatTest = objetRegEx.Match(tbxDistance.Text);
+            if (!résultatTest.Success)
+            {
+                // KO : Fond de la zone de saisie passe en rouge
+                tbxDistance.BackColor = Color.Red;
+                e.Cancel = true;
+            }
+
+            else
+            {
+                // OK : Fond de la zone de saisie passe en vert
+                tbxDistance.BackColor = Color.Green;
+            }
+        }
     }
 }

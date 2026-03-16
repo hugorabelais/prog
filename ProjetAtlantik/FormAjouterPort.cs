@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -46,6 +47,32 @@ namespace ProjetAtlantik
                 }
             }
             Console.ReadLine();
+        }
+
+        private void tbxAjouterPort_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxAjouterPort_Validating(object sender, CancelEventArgs e)
+        {
+            var objetRegEx = new Regex("^[a-zA-Zéèêëçàâôù ûïî]*$");
+            // Nombre : ^[0-9]*$
+            // Alphabétique (sans accent, sans blanc : ^[a-zA-Z]*$
+            // Alphabétique (avec accent) : ^[a-zA-Zéèêëçàâôù ûïî]*$
+            var résultatTest = objetRegEx.Match(tbxAjouterPort.Text);
+            if (!résultatTest.Success)
+            {
+                // KO : Fond de la zone de saisie passe en rouge
+                tbxAjouterPort.BackColor = Color.Red;
+                e.Cancel = true;
+            }
+
+            else
+            {
+                // OK : Fond de la zone de saisie passe en vert
+                tbxAjouterPort.BackColor = Color.Green;
+            }
         }
     }
 }

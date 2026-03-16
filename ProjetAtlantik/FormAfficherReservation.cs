@@ -125,58 +125,61 @@ namespace ProjetAtlantik
 
         private void lvAfficherReservation_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Label label = new Label();
-
-            int i = 2;
-            int noreservation = int.Parse(lvAfficherReservation.SelectedItems[0].Text);
-            int quantitereservee;
-            string libelle;
-            try
+            if (lvAfficherReservation.SelectedItems.Count != 0)
             {
-                MySqlConnection maCnx3;
-                MySqlDataReader jeuEnr3 = null;
-                maCnx3 = new MySqlConnection("server=localhost;user=root;database=Atlantik;port=3306;password=");
-                maCnx3.Open();
-                string requete = "SELECT libelle,QUANTITERESERVEE, MONTANTTOTAL, MODEREGLEMENT FROM enregistrer e inner join reservation r on (e.NORESERVATION = r.NORESERVATION) inner join type t on (t.LETTRECATEGORIE = e.LETTRECATEGORIE and t.NOTYPE = e.NOTYPE) where r.NORESERVATION = @noreservation;";
-                var maCde = new MySqlCommand(requete, maCnx3);
-                maCde.Parameters.AddWithValue("@noreservation", noreservation);
-                jeuEnr3 = maCde.ExecuteReader();
-                while (jeuEnr3.Read())
+                Label label = new Label();
+
+                int i = 2;
+                int noreservation = int.Parse(lvAfficherReservation.SelectedItems[0].Text);
+                int quantitereservee;
+                string libelle;
+                try
                 {
-                    libelle = (string)jeuEnr3["libelle"];
-                    quantitereservee = (int)jeuEnr3["quantitereservee"];
+                    MySqlConnection maCnx3;
+                    MySqlDataReader jeuEnr3 = null;
+                    maCnx3 = new MySqlConnection("server=localhost;user=root;database=Atlantik;port=3306;password=");
+                    maCnx3.Open();
+                    string requete = "SELECT libelle,QUANTITERESERVEE, MONTANTTOTAL, MODEREGLEMENT FROM enregistrer e inner join reservation r on (e.NORESERVATION = r.NORESERVATION) inner join type t on (t.LETTRECATEGORIE = e.LETTRECATEGORIE and t.NOTYPE = e.NOTYPE) where r.NORESERVATION = @noreservation;";
+                    var maCde = new MySqlCommand(requete, maCnx3);
+                    maCde.Parameters.AddWithValue("@noreservation", noreservation);
+                    jeuEnr3 = maCde.ExecuteReader();
+                    while (jeuEnr3.Read())
+                    {
+                        libelle = (string)jeuEnr3["libelle"];
+                        quantitereservee = (int)jeuEnr3["quantitereservee"];
+                        label = new Label();
+                        label.Text = libelle.ToString();
+                        label.Location = new Point(50, i * 30);
+                        gbxReservation.Controls.Add((label));
+                        label = new Label();
+                        label.Text = quantitereservee.ToString();
+                        label.Location = new Point(175, i * 30);
+                        gbxReservation.Controls.Add(label);
+                        i += 1;
+                    }
                     label = new Label();
-                    label.Text = libelle.ToString();
+                    label.Text = "Montant total";
                     label.Location = new Point(50, i * 30);
                     gbxReservation.Controls.Add((label));
                     label = new Label();
-                    label.Text = quantitereservee.ToString();
+                    label.Text = ((double)jeuEnr3["montanttotal"]).ToString();
                     label.Location = new Point(175, i * 30);
-                    gbxReservation.Controls.Add(label);
+                    gbxReservation.Controls.Add((label));
                     i += 1;
+                    label = new Label();
+                    label.Text = "Réglé par " + ((string)jeuEnr3["modereglement"]).ToString();
+                    label.Location = new Point(50, i * 30);
+                    label.Width = 200;
+                    gbxReservation.Controls.Add((label));
+
+
+                    maCnx3.Close();
                 }
-                label = new Label();
-                label.Text = "Montant total";
-                label.Location = new Point(50, i * 30);
-                gbxReservation.Controls.Add((label));
-                label = new Label();
-                label.Text = ((double)jeuEnr3["montanttotal"]).ToString();
-                label.Location = new Point(175, i * 30);
-                gbxReservation.Controls.Add((label));
-                i += 1;
-                label = new Label();
-                label.Text = "Réglé par " + ((string)jeuEnr3["modereglement"]).ToString();
-                label.Location = new Point(50, i * 30);
-                label.Width = 200;
-                gbxReservation.Controls.Add((label));
+                catch (MySqlException er)
+                {
 
-
-                maCnx3.Close();
-            }
-            catch (MySqlException er)
-            {
-
-                MessageBox.Show("erreur", "erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("erreur", "erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
