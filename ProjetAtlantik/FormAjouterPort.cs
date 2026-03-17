@@ -38,7 +38,7 @@ namespace ProjetAtlantik
                     var maCde = new MySqlCommand(requete, maCnx);
                     maCde.Parameters.AddWithValue("@nom", nom);
                     maCde.ExecuteNonQuery();
-                    MessageBox.Show("port ajouté", "port ajouter", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("port ajouté", "port ajouté", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
                 catch (MySqlException er)
                 {

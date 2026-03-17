@@ -87,10 +87,11 @@
             this.dateSelectioner.CustomFormat = "yyyy-MM-dd";
             this.dateSelectioner.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateSelectioner.Location = new System.Drawing.Point(489, 57);
+            this.dateSelectioner.MinDate = new System.DateTime(2026, 3, 17, 0, 0, 0, 0);
             this.dateSelectioner.Name = "dateSelectioner";
             this.dateSelectioner.Size = new System.Drawing.Size(93, 20);
             this.dateSelectioner.TabIndex = 5;
-            this.dateSelectioner.Value = new System.DateTime(2021, 7, 10, 0, 0, 0, 0);
+            this.dateSelectioner.Value = new System.DateTime(2026, 3, 17, 16, 18, 35, 0);
             // 
             // btnAfficher
             // 

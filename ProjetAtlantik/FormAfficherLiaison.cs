@@ -208,13 +208,7 @@ namespace ProjetAtlantik
             lvAfficherTraverser.Columns.Add("N°", 100); // 100 = largeur colonne
             lvAfficherTraverser.Columns.Add("Heure", 70);
             lvAfficherTraverser.Columns.Add("Bateau", 90);
-            foreach (Categorie categorie in tabcategorie)
-            {
-
-                lvAfficherTraverser.Columns.Add(categorie.getlettrecategorie() +" "+ categorie.getlibelle(), 80);
-
-            }
-
+            int i = 3;
             foreach (Traversee traversee in tabTraversee)
             {
 
@@ -222,9 +216,15 @@ namespace ProjetAtlantik
                 tabItem[0] = traversee.getnoTraversee().ToString();
                 tabItem[1] = traversee.getTime();
                 tabItem[2] = traversee.getNom();
-                tabItem[3] = (getCapciteMaximale(traversee.getnoTraversee() , "A") - getQuantiteEnregistree(traversee.getnoTraversee(),"A")).ToString();
-                tabItem[4] = (getCapciteMaximale(traversee.getnoTraversee(), "B") - getQuantiteEnregistree(traversee.getnoTraversee(), "B")).ToString(); 
-                tabItem[5] = (getCapciteMaximale(traversee.getnoTraversee(), "C") - getQuantiteEnregistree(traversee.getnoTraversee(), "C")).ToString();
+                foreach (Categorie categorie in tabcategorie)
+                {
+
+                    lvAfficherTraverser.Columns.Add(categorie.getlettrecategorie() + " " + categorie.getlibelle(), 80);
+                    tabItem[i] = (getCapciteMaximale(traversee.getnoTraversee(), categorie.getlettrecategorie()) - getQuantiteEnregistree(traversee.getnoTraversee(), "A")).ToString();
+                    i ++;
+
+                }
+
 
 
 

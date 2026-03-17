@@ -33,11 +33,10 @@ namespace ProjetAtlantik
                     var maCde = new MySqlCommand(requete, maCnx);
                     maCde.Parameters.AddWithValue("@nom", nom);
                     maCde.ExecuteNonQuery();
-                    MessageBox.Show("secteur ajouté", "secteur ajouter", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("secteur ajouté", "secteur ajouté", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
                 catch (MySqlException er)
                 {
-                    Console.WriteLine("Erreur " + er.ToString());
                     MessageBox.Show("erreur", "erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }

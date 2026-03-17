@@ -96,7 +96,7 @@ namespace ProjetAtlantik
                     maCde.Parameters.AddWithValue("@noport_arrivee", ((Port)cmbPortArrivee.SelectedItem).getidPort());
                     maCde.Parameters.AddWithValue("@distance", distance);
                     maCde.ExecuteNonQuery();
-                    MessageBox.Show("liaison ajouté", "liaison ajouter", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("liaison ajouté", "liaison ajouté", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                     maCnx.Close();
                 }
@@ -108,7 +108,7 @@ namespace ProjetAtlantik
             }
             else
             {
-                MessageBox.Show("Veuillez renseigner toutes les infos !");
+                MessageBox.Show("Veuillez renseigner toutes les informations !");
             }
 
 

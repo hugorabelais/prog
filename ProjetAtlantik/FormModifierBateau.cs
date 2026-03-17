@@ -120,7 +120,7 @@ namespace ProjetAtlantik
                             maCde2.ExecuteNonQuery();
                         }
                     }
-                    MessageBox.Show("bateau modifier", "les capacité du bateau ont été modifié", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("bateau modifié", "les capacités du bateau ont été modifiés", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                     maCnx.Close();
                 }

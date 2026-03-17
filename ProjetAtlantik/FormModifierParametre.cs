@@ -135,7 +135,7 @@ namespace ProjetAtlantik
                     maCde2.ExecuteNonQuery();
                     }
                 }
-                MessageBox.Show("parametre modifier", "les parametres ont été modifié", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("paramètres modifiés", "les paramètres ont été modifiés", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                 maCnx.Close();
             }

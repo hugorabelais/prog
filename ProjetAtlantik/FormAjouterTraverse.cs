@@ -116,7 +116,7 @@ namespace ProjetAtlantik
                 maCde.Parameters.AddWithValue("@dateheurearrivee", dateHeureArrive);
                 maCde.Parameters.AddWithValue("@clotureembarquement", clotureEmbarquement);
                 maCde.ExecuteNonQuery();
-                MessageBox.Show("traversé ajouté", "la traversée a été ajouté", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("traversée ajoutée", "la traversée a été ajouté", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                 maCnx.Close();
             }

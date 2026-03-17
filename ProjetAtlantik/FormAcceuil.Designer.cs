@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAcceuil));
             this.mmAcceuil = new System.Windows.Forms.MenuStrip();
             this.miAjouter = new System.Windows.Forms.ToolStripMenuItem();
             this.miSecteur = new System.Windows.Forms.ToolStripTextBox();
@@ -38,11 +39,11 @@
             this.miAjouterUneTraversée = new System.Windows.Forms.ToolStripMenuItem();
             this.mimodifier = new System.Windows.Forms.ToolStripMenuItem();
             this.miModifierBateau = new System.Windows.Forms.ToolStripMenuItem();
+            this.miModifierParametre = new System.Windows.Forms.ToolStripMenuItem();
             this.miAfficher = new System.Windows.Forms.ToolStripMenuItem();
             this.miAfficherLiaison = new System.Windows.Forms.ToolStripMenuItem();
             this.miAfficherReservation = new System.Windows.Forms.ToolStripMenuItem();
             this.miAPropos = new System.Windows.Forms.ToolStripMenuItem();
-            this.miModifierParametre = new System.Windows.Forms.ToolStripMenuItem();
             this.mmAcceuil.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,6 +135,13 @@
             this.miModifierBateau.Text = "Un bateau";
             this.miModifierBateau.Click += new System.EventHandler(this.miModifierBateau_Click);
             // 
+            // miModifierParametre
+            // 
+            this.miModifierParametre.Name = "miModifierParametre";
+            this.miModifierParametre.Size = new System.Drawing.Size(191, 22);
+            this.miModifierParametre.Text = "Les paramètres du site";
+            this.miModifierParametre.Click += new System.EventHandler(this.miModifierParametre_Click);
+            // 
             // miAfficher
             // 
             this.miAfficher.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -164,17 +172,13 @@
             this.miAPropos.Size = new System.Drawing.Size(67, 22);
             this.miAPropos.Text = "A propos";
             // 
-            // miModifierParametre
-            // 
-            this.miModifierParametre.Name = "miModifierParametre";
-            this.miModifierParametre.Size = new System.Drawing.Size(191, 22);
-            this.miModifierParametre.Text = "Les paramètres du site";
-            this.miModifierParametre.Click += new System.EventHandler(this.miModifierParametre_Click);
-            // 
             // FormAcceuil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.mmAcceuil);
             this.MainMenuStrip = this.mmAcceuil;

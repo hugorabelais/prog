@@ -125,6 +125,7 @@ namespace ProjetAtlantik
 
         private void lvAfficherReservation_SelectedIndexChanged(object sender, EventArgs e)
         {
+            gbxReservation.Controls.Clear();
             if (lvAfficherReservation.SelectedItems.Count != 0)
             {
                 Label label = new Label();

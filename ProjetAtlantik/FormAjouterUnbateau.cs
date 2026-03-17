@@ -90,7 +90,7 @@ namespace ProjetAtlantik
                         maCde2.ExecuteNonQuery();
                     }
                 }
-                MessageBox.Show("tarif ajouté", "tout les tarifs ont été ajouté", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("tarifs ajoutés", "tous les tarifs ont été ajoutés", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                 maCnx.Close();
             }
